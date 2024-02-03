@@ -1,0 +1,143 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<h1 style="color: white;">Cameras</h1>
+    <style>
+    .thumbnail {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .box-element {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .box-element:hover {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .product h6 {
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    .product hr {
+        border-top: 1px solid #ddd;
+    }
+
+    .add-btn,
+    .view-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .add-btn {
+        background-color: #2B7A78; /* Changed to the desired color */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .add-btn:hover {
+        background-color: #145C59; /* Darker shade on hover */
+    }
+
+    .view-btn {
+        background-color: #17252A; /* Changed to the desired color */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .view-btn:hover {
+        background-color: #0B0C10; /* Darker shade on hover */
+    }
+
+    .product h4 {
+        display: inline-block;
+        float: right;
+        font-size: 1.2em;
+        color: #333;
+    }
+</style>
+
+<!-- Rest of your HTML code remains unchanged -->
+
+
+<div class="row">
+    <!-- Repeat the following code for each product -->
+    <div class="col-lg-4">
+        <div class="box-element product">
+            <img class="thumbnail" src="{% static 'images/bs1.jpg' %}">
+            <h6><strong>Camera #1</strong></h6>
+            <h6><strong>45,000 php</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success view-btn" href="#">View</a>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="box-element product">
+            <img class="thumbnail" src="{% static 'images/bs2.jpg' %}">
+            <h6><strong>Camera #2</strong></h6>
+            <h6><strong>40,000 php</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success view-btn" href="#">View</a>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="box-element product">
+            <img class="thumbnail" src="{% static 'images/bs3.jpg' %}">
+            <h6><strong>Camera #3</strong></h6>
+            <h6><strong>30,000 php</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success view-btn" href="#">View</a>
+        </div>
+    </div>
+    <!-- Repeat the above code for each product -->
+</div>
+<h1 style="color: white;">Accessories</h1>
+
+<div class="row">
+    <!-- Repeat the following code for each product -->
+    <div class="col-lg-4">
+        <div class="box-element product">
+            <img class="thumbnail" src="{% static 'images/ac1.jpg' %}">
+            <h6><strong>Accessory #1</strong></h6>
+            <h6><strong>5,000 php</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success view-btn" href="#">View</a>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="box-element product">
+            <img class="thumbnail" src="{% static 'images/ac2.jpg' %}">
+            <h6><strong>Accessory #2</strong></h6>
+            <h6><strong>6,000 php</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success view-btn" href="#">View</a>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="box-element product">
+            <img class="thumbnail" src="{% static 'images/ac3.jpg' %}">
+            <h6><strong>Accessory #3</strong></h6>
+            <h6><strong>3,000 php</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success view-btn" href="#">View</a>
+        </div>
+    </div>
+
+{% endblock content %}

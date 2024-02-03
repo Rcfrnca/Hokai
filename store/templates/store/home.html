@@ -1,0 +1,83 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    
+    .jumbotron {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 100px 0;
+    }
+
+   
+    .card {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card-title {
+        color: #257A78;
+    }
+
+    .card-text {
+        color: #333;
+    }
+
+    .btn-sm {
+        background-color: #257A78;
+        color: #fff;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn-sm:hover {
+        background-color: #145C59;
+    }
+</style>
+
+<div class="jumbotron jumbotron-fluid text-center" style="background-image: url('{% static 'images/bgg.jpg' %}');">
+    <div class="container">
+        <h1 class="display-4" style="font-weight: bold; color: white;">Welcome to Hokai Camera Shop</h1>
+        <p class="lead" style="color: white;">Discover the latest cameras and accessories for your photography needs.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card rounded">
+                <img src="{% static 'images/bs1.jpg' %}" class="card-img-top" alt="Camera 1">
+                <div class="card-body">
+                    <h5 class="card-title">Best seller #1</h5>
+                    <p class="card-text">Capture stunning moments with our high-end professional cameras.</p>
+                    <a href="#" class="btn btn-sm" onmouseover="this.style.backgroundColor='#145C59'" onmouseout="this.style.backgroundColor='#257A78'">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card rounded">
+                <img src="{% static 'images/bs2.jpg' %}" class="card-img-top" alt="Camera 2">
+                <div class="card-body">
+                    <h5 class="card-title">Best seller #2</h5>
+                    <p class="card-text">Carry a powerful camera in your pocket. Perfect for on-the-go photography.</p>
+                    <a href="#" class="btn btn-sm" onmouseover="this.style.backgroundColor='#145C59'" onmouseout="this.style.backgroundColor='#257A78'">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card rounded">
+                <img src="{% static 'images/bs3.jpg' %}" class="card-img-top" alt="Accessory 1">
+                <div class="card-body">
+                    <h5 class="card-title">Best seller #3</h5>
+                    <p class="card-text">Enhance your photography experience with our camera.</p>
+                    <a href="#" class="btn btn-sm" onmouseover="this.style.backgroundColor='#145C59'" onmouseout="this.style.backgroundColor='#257A78'">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

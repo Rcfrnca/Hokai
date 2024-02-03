@@ -1,0 +1,49 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header" style="background-color: #17252A; color: #fff;">
+            <h5 class="lead" style="color: white;">Your Cart</h5>
+        </div>
+        <div class="card-body">
+
+            <a class="btn btn-outline-dark" href="{% url 'store' %}" style="background-color: #2B7A78; color: #fff;">&#x2190; Continue Shopping</a>
+
+            <br>
+            <br>
+            <table class="table table-bordered">
+                <tr>
+                    <th><h5>Items: <strong>1</strong></h5></th>
+                    <th><h5>Total:<strong> 45,000 php</strong></h5></th>
+                    <th>
+                        <a class="btn btn-success" href="{% url 'checkout' %}" style="background-color: #2B7A78; color: #fff;">Checkout</a>
+                    </th>
+                </tr>
+            </table>
+
+        </div>
+        <div class="card-body">
+            <div class="cart-row">
+                <div class="col-3">
+                    <img class="row-image img-fluid" src="{% static 'images/bs1.jpg' %}" alt="Product Image">
+                </div>
+                <div class="col-6">
+                    <p class="product-name">Camera #1</p>
+                    <p class="price">45,000 php</p>
+                </div>
+                <div class="col-3">
+                    <p class="quantity">1</p>
+                    <div class="quantity-controls">
+                        <img class="chg-quantity" src="{% static 'images/arrow-up.png' %}" alt="Increase Quantity">
+                        <img class="chg-quantity" src="{% static 'images/arrow-down.png' %}" alt="Decrease Quantity">
+                    </div>
+                    <p class="total-price">$10,000₱</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
